@@ -44,6 +44,12 @@ public class TentacleControl : MonoBehaviour
                 UpdateCameraPoistion(index);
             }
         }
+        else if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Vector3 scaleChange = new Vector3(0, 0.5f);
+            tentacles[index].transform.Translate(Vector3.up * 0.5f);
+            tentacles[index].transform.localScale += scaleChange;
+        }
     }
 
     void UpdateCameraPoistion(int index)
